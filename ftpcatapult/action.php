@@ -44,7 +44,7 @@ else if($cmd=="push"){
 			//echo "Löytyi ".$d."//".$f."<br>";
 			if(is_dir($d."/".$f)&& $f!="." && $f!=".."){
 				if(!file_exists($target_path)){
-					echo "FTP tee kansio "."/".$target.$f."/"."<br>";
+					echo "FTP create directory ".$remote_path.$target.$f."/"."<br>";
 					//kansiota ei ole
 					//FTP tee kansio
 					$newdir=$remote_path.$target.$f."/";
@@ -59,8 +59,8 @@ else if($cmd=="push"){
 			//mitä tehdään jokaiselle tiedostolle
 			else if(!is_dir($d."/".$f)&& $f!="." && $f!=".."){
 				if(!file_exists($target_path)){
-					echo $d."/".$f." on uusi.<br>";
-					echo "FTP siirrä tiedosto -> "."/".$target.$f."<br>";
+					echo $d."/".$f." is new.<br>";
+					echo "FTP send file -> ".$remote_path.$target.$f."<br>";
 					//tiedostoa ei ole					
 					//FTP siirrä tiedosto
 					// upload a file
@@ -73,8 +73,8 @@ else if($cmd=="push"){
 					}								
 				}
 				else if(!files_are_equal($d."/".$f,$target_path)){
-					echo $d."/".$f." on muuttunut.<br>";
-					echo "FTP siirrä tiedosto -> "."/".$target.$f."<br>";				
+					echo $d."/".$f." has changed.<br>";
+					echo "FTP send file -> ".$remote_path.$target.$f."<br>";				
 					//tiedosto on muuttunut
 					//FTP siirrä tiedosto
 					// upload a file
