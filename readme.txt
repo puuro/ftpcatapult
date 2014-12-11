@@ -1,8 +1,6 @@
 FTP CATAPULT
 
-A minimalistic version control system for Windows. Uses FTP to move changed files to a server. To be used with e.g. XAMPP. Requires PHP. 
-
-Use Git if possible. If you can't use Git e.g. because you don't have SSH connection then try out Ftp Catapult. 
+A minimalistic website deploying tool for Windows. Uses FTP to move changed files to a server. To be used with e.g. XAMPP. Requires PHP. 
 
 INSTALLATION
 
